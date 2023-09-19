@@ -1,0 +1,31 @@
+<!-- edit.component.html -->
+
+<div class="container mt-5">
+  <h1>Edit Recipe</h1>
+
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" [(ngModel)]="recipeName" id="name" required>
+    <div *ngIf="recipeName === ''" class="text-danger">Name is required!</div>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <input type="text" class="form-control" [(ngModel)]="recipeDescription" id="description" required>
+    <div *ngIf="recipeDescription === ''" class="text-danger">Description is required!</div>
+  </div>
+
+  <div class="form-group">
+    <label for="ingredients">Ingredients (comma separated):</label>
+    <input type="text" class="form-control" [(ngModel)]="ingredients" id="ingredients" required>
+    <div *ngIf="ingredients === ''" class="text-danger">Ingredients are required!</div>
+  </div>
+
+  <div class="form-group">
+    <label for="instructions">Instructions:</label>
+    <textarea class="form-control" [(ngModel)]="instructions" id="instructions" rows="3" required></textarea>
+    <div *ngIf="instructions === ''" class="text-danger">Instructions are required!</div>
+  </div>
+
+  <button class="btn btn-primary" (click)="updateRecipe()" [disabled]="!isValid()" style="margin-top: 0.65em;">Update Recipe</button>
+</div>

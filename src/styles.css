@@ -1,1 +1,176 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+/* src/styles.css */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --danger-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --header-footer-color: #ffba84;
+  --text-size: 16px;
+  --body-text-size: 16px
+}
+
+.high-contrast {
+  --primary-color: white;
+  --secondary-color: yellow;
+  --danger-color: red;
+  --light-color: black;
+  --dark-color: white;
+  --header-footer-color: gray;
+  --text-size: 16px;
+  background-color: black;
+  color: black;
+}
+
+body.high-contrast a,
+body.high-contrast .btn {
+  color: black !important;
+  background-color: yellow !important;
+  border-color: white !important;
+}
+
+.low-brightness app-header {
+  filter: brightness(0.7);
+}
+
+.low-brightness footer {
+  background-color: rgba(169, 120, 84, 0.85) !important;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-size: var(--body-text-size);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #b36e50;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgba(108, 61, 28, 0.85);
+  border-color: rgba(169, 120, 84, 0.85);
+}
+
+.btn-outline-primary {
+  background-color: #ffe1b2;
+  color: #3e221f;
+  border-radius: 10px;
+  padding: 0.7em;
+  margin-bottom: 0.7em;
+}
+
+
+.btn-outline-primary:hover {
+  background-color: #ffba84;
+  color: #3e221f;
+}
+
+.delete {
+  cursor: pointer;
+  color: rgba(161, 2, 2, 0.85);
+  transition: background-color 0.3s ease;
+  margin-bottom: 0.3em;
+  margin-left: 7.5em;
+  width: 2em;
+  height: 2em;
+}
+
+.delete:hover {
+  color: rgba(255, 79, 79, 0.85);
+  border: transparent 10px;
+}
+
+.btn-primary:focus,
+.btn-primary:active:focus {
+  background-color: #b36e50;
+  border-color: rgba(169, 120, 84, 0.85);
+  box-shadow: none;
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary:active:focus {
+  background-color: #ffe1b2;
+  color: #3e221f;
+  box-shadow: none;
+}
+
+.bi-trash:focus,
+.bi-trash:active:focus {
+  background-color: var(--danger-color);
+  box-shadow: none;
+}
+
+
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+.form-check-input {
+  margin-right: 10px;
+}
+
+.navbar {
+  background-color: var(--header-footer-color);
+}
+
+.header {
+  background-color: var(--header-footer-color);
+  font-size: var(--text-size);
+}
+
+.header h1 {
+  font-family: Gabriola, serif;
+  font-weight: bold;
+  display: inline;
+  margin-top: auto;
+  margin-left: 0.3em;
+}
+
+.header img {
+  margin-top: -0.5em;
+  margin-left: 0.5em;
+}
+
+.footer {
+  background-color: var(--header-footer-color);
+  font-size: var(--text-size);
+  padding: 1em;
+  padding-bottom: 0.1em !important;
+  position: fixed;
+  width: 100%;
+}
+
+.card-img {
+  height: 9em;
+  width: auto;
+}
+
+
+
+

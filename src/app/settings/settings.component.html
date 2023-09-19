@@ -1,0 +1,23 @@
+<!-- settings.component.html -->
+<div class="container mt-5">
+  <h1>Settings</h1>
+  <p>Configure the application according to your preferences.</p>
+  <div class="form-check">
+    <label>
+      <input type="checkbox" [(ngModel)]="accessibilityMode" (ngModelChange)="toggleAccessibilityMode()" />
+      Big Text Mode
+    </label>
+  </div>
+  <div class="form-check">
+    <label>
+      <input type="checkbox" [(ngModel)]="highContrastMode" (ngModelChange)="toggleHighContrastMode()" />
+      High Contrast Mode
+    </label>
+  </div>
+  <div class="form-check">
+    <label>
+      <input type="checkbox" [(ngModel)]="lowBrightnessMode" (ngModelChange)="toggleLowBrightnessMode()" />
+      Low Brightness Mode
+    </label>
+  </div>
+</div>

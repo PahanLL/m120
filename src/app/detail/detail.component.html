@@ -1,0 +1,9 @@
+<div class="container mt-5" *ngIf="recipe">
+  <h2>{{ recipe.name }}</h2>
+  <p>{{ recipe.description }}</p>
+  <ul>
+    <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
+  </ul>
+  <p>{{ recipe.instructions }}</p>
+  <a routerLink="/edit/{{recipe.id}}" class="btn btn-primary">Edit</a>
+</div>

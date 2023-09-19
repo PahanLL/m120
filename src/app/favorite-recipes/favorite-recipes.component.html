@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h1>Favorite Recipes</h1>
+  <p>Here is a list of all your favorite recipes.</p>
+  <div *ngFor="let recipe of favoriteRecipes" class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ recipe.name }}</h5>
+          <p class="card-text">{{ recipe.description }}</p>
+          <a routerLink="/detail/{{ recipe.id }}" class="btn btn-outline-primary">Details</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img [src]="imageUrl" class="card-img" alt="Recipe Image">
+      </div>
+    </div>
+  </div>
+</div>
